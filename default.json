@@ -3,6 +3,7 @@
   "description": ["Default Renovate preset for Polarion Docker repos"],
   "extends": [
     "config:recommended",
+    "helpers:pinGitHubActionDigests",
     ":prNotPending",
     ":semanticCommits",
     ":enablePreCommit"
