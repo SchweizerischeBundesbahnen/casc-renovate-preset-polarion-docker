@@ -2,8 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": ["Default Renovate preset for Polarion Docker repos"],
   "extends": [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests",
+    "config:best-practices",
     ":prNotPending",
     ":semanticCommits",
     ":enablePreCommit"
