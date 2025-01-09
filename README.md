@@ -1,4 +1,4 @@
-# casc-renovate-polarion-java
+# casc-renovate-preset-polarion-docker
 Renovate configuration for Polarion Docker Repos
 
 ## How to Use
