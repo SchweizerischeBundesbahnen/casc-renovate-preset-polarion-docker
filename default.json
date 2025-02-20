@@ -34,6 +34,22 @@
         "devDependencies"
       ],
       "automerge": true
+    },
+    {
+      "description": "Do not automatically update Python major and minor versions in Docker and Poetry, create PR instead",
+      "matchManagers": [
+        "dockerfile",
+        "poetry"
+      ],
+      "matchPackageNames": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "automerge": false,
+      "prCreation": "immediate"
     }
   ]
 }
