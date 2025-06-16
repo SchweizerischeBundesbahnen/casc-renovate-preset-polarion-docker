@@ -40,6 +40,9 @@
         "dockerfile",
         "poetry"
       ],
+      "postUpdateOptions": [
+        "poetry-lock"
+      ],
       "matchPackageNames": [
         "python"
       ],
