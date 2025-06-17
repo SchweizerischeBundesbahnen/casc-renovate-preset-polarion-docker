@@ -35,6 +35,14 @@
       "automerge": true
     },
     {
+      "matchManagers": [
+        "poetry"
+      ],
+      "postUpdateOptions": [
+        "poetry-lock"
+      ]
+    },
+    {
       "description": "Do not automatically update Python major and minor versions in Docker and Poetry, create PR instead",
       "matchManagers": [
         "dockerfile",
