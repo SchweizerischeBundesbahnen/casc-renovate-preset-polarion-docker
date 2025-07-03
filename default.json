@@ -14,14 +14,6 @@
   "packageRules": [
     {
       "matchManagers": [
-        "poetry"
-      ],
-      "postUpdateOptions": [
-        "poetry-lock"
-      ]
-    },
-    {
-      "matchManagers": [
         "pre-commit"
       ],
       "automerge": true
@@ -48,9 +40,6 @@
         "dockerfile",
         "poetry"
       ],
-      "postUpdateOptions": [
-        "poetry-lock"
-      ],
       "matchPackageNames": [
         "python"
       ],
@@ -61,5 +50,10 @@
       "automerge": false,
       "prCreation": "immediate"
     }
-  ]
+  ],
+  "postUpgradeTasks": {
+    "commands": ["poetry lock --no-update"],
+    "fileFilters": ["poetry.lock"],
+    "executionMode": "branch"
+  }
 }
