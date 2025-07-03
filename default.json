@@ -52,8 +52,12 @@
     }
   ],
   "postUpgradeTasks": {
-    "commands": ["poetry lock --no-update"],
-    "fileFilters": ["poetry.lock"],
-    "executionMode": "branch"
-  }
+      "commands": [
+        "poetry lock --no-update"
+      ],
+      "fileFilters": [
+        "poetry.lock"
+      ],
+      "executionMode": "branch"
+    }
 }
