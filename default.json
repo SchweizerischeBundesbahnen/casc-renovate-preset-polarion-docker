@@ -11,6 +11,9 @@
   "automergeType": "branch",
   "platformAutomerge": true,
   "prCreation": "not-pending",
+  "allowedPostUpgradeCommands": [
+    "^poetry lock --no-update$"
+  ],
   "packageRules": [
     {
       "matchManagers": [
