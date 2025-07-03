@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": [
-    "Default Renovate preset for Polarion Docker repos"
+    "Default Renovate preset for Polarion Docker repos (hosted app)"
   ],
   "extends": [
     "config:best-practices",
@@ -11,9 +11,6 @@
   "automergeType": "branch",
   "platformAutomerge": true,
   "prCreation": "not-pending",
-  "allowedPostUpgradeCommands": [
-    "^poetry lock --no-update$"
-  ],
   "packageRules": [
     {
       "matchManagers": [
@@ -52,15 +49,18 @@
       ],
       "automerge": false,
       "prCreation": "immediate"
-    }
-  ],
-  "postUpgradeTasks": {
-      "commands": [
-        "poetry lock --no-update"
+    },
+    {
+      "description": "Enable Poetry lock file updates for all Poetry dependencies",
+      "matchManagers": [
+        "poetry"
       ],
-      "fileFilters": [
-        "poetry.lock"
+      "postUpdateOptions": [
+        "poetryLockFileUpdate"
       ],
-      "executionMode": "branch"
+      "matchDatasources": [
+        "pypi"
+      ]
     }
+  ]
 }
