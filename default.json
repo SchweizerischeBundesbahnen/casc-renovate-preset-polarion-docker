@@ -11,6 +11,14 @@
   "automergeType": "branch",
   "platformAutomerge": true,
   "prCreation": "not-pending",
+  "rebaseWhen": "behind-base-branch",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "extends": [
+      "schedule:weekly"
+    ]
+  },
   "packageRules": [
     {
       "matchManagers": [
