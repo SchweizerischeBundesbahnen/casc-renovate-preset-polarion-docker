@@ -28,18 +28,18 @@
       "automerge": true
     },
     {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    },
+    {
       "description": "Automerge non-major updates",
       "matchUpdateTypes": [
         "minor",
         "patch",
         "pin",
         "digest"
-      ],
-      "automerge": true
-    },
-    {
-      "matchDepTypes": [
-        "devDependencies"
       ],
       "automerge": true
     },
