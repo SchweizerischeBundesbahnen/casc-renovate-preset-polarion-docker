@@ -29,7 +29,8 @@
     },
     {
       "matchDepTypes": [
-        "devDependencies"
+        "dev-dependencies",
+        "test"
       ],
       "automerge": true
     },
