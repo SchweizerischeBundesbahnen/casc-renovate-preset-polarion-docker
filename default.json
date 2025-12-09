@@ -17,7 +17,8 @@
     "automerge": true,
     "extends": [
       "schedule:weekly"
-    ]
+    ],
+    "minimumReleaseAge": null
   },
   "packageRules": [
     {
