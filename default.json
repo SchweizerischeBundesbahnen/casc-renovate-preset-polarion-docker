@@ -60,6 +60,22 @@
         "major"
       ],
       "automerge": false
+    },
+    {
+      "description": "Python minor and major version updates require manual review",
+      "matchManagers": [
+        "dockerfile",
+        "pep621"
+      ],
+      "matchPackageNames": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "automerge": false,
+      "prCreation": "immediate"
     }
   ],
   "vulnerabilityAlerts": {
