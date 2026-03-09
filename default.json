@@ -17,9 +17,9 @@
   "automergeType": "branch",
   "platformAutomerge": true,
   "prCreation": "status-success",
+  "internalChecksFilter": "strict",
   "rebaseWhen": "behind-base-branch",
   "minimumReleaseAge": "3 days",
-  "internalChecksFilter": "strict",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
@@ -78,12 +78,14 @@
       "prCreation": "immediate"
     }
   ],
+  "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
     "enabled": true,
     "labels": [
       "security"
     ],
-    "automerge": false
+    "automerge": false,
+    "minimumReleaseAge": "0 days"
   },
   "constraints": {
     "python": ">=3.12"
