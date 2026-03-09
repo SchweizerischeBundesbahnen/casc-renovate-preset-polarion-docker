@@ -2,7 +2,7 @@
 
 **Renovate configuration preset for Polarion Docker repositories on GitHub**
 
-Dependency management for Dockerfiles, Docker Compose, Python (uv/pep621), pre-commit hooks, and GitHub Actions with smart automerge and security-first defaults.
+Extends [casc-renovate-preset-polarion](https://github.com/SchweizerischeBundesbahnen/casc-renovate-preset-polarion) (shared base) and adds Docker-specific configuration.
 
 ---
 

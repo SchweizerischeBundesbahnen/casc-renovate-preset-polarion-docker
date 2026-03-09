@@ -1,9 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Default Renovate preset for Polarion Docker repositories maintained by the SBB Polarion Team",
+  "description": "Renovate preset for Polarion Docker repositories maintained by the SBB Polarion Team",
   "extends": [
-    "config:best-practices",
-    ":semanticCommits"
+    "github>SchweizerischeBundesbahnen/casc-renovate-preset-polarion"
   ],
   "enabledManagers": [
     "dockerfile",
@@ -13,54 +12,10 @@
     "github-actions",
     "custom.regex"
   ],
-  "dependencyDashboard": true,
-  "automergeType": "branch",
-  "platformAutomerge": true,
-  "prCreation": "status-success",
-  "internalChecksFilter": "strict",
-  "rebaseWhen": "behind-base-branch",
-  "minimumReleaseAge": "3 days",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": [
-      "before 4am on monday"
-    ],
-    "minimumReleaseAge": null
+  "constraints": {
+    "python": ">=3.12"
   },
   "packageRules": [
-    {
-      "description": "Automerge non-major updates (minor, patch, pin, digest)",
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": true
-    },
-    {
-      "description": "Major updates require manual review (potential breaking changes)",
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "automerge": false
-    },
-    {
-      "description": "Automerge GitHub Actions updates including major versions",
-      "matchManagers": [
-        "github-actions"
-      ],
-      "automerge": true
-    },
-    {
-      "description": "pre-commit hooks - Automerge even if tests fail (low-risk tooling updates)",
-      "matchManagers": [
-        "pre-commit"
-      ],
-      "automerge": true,
-      "ignoreTests": true
-    },
     {
       "description": "Python minor and major version updates require manual review",
       "matchManagers": [
@@ -76,25 +31,6 @@
       ],
       "automerge": false,
       "prCreation": "immediate"
-    },
-    {
-      "description": "Vulnerability alerts get highest priority to jump rate limit queue (prHourlyLimit/prConcurrentLimit)",
-      "matchCategories": [
-        "security"
-      ],
-      "prPriority": 99
     }
-  ],
-  "osvVulnerabilityAlerts": true,
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "labels": [
-      "security"
-    ],
-    "automerge": false,
-    "minimumReleaseAge": "0 days"
-  },
-  "constraints": {
-    "python": ">=3.12"
-  }
+  ]
 }
