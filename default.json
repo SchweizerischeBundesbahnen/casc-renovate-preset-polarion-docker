@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": ["Default Renovate preset for Polarion Docker epositories maintained by the SBB Polarion Team"],
+  "description": "Default Renovate preset for Polarion Docker repositories maintained by the SBB Polarion Team",
   "extends": [
     "config:best-practices",
     ":semanticCommits"
@@ -40,7 +40,14 @@
       "automerge": true
     },
     {
-      "description": "Automerge GitHub Actions updates",
+      "description": "Major updates require manual review (potential breaking changes)",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "description": "Automerge GitHub Actions updates including major versions",
       "matchManagers": [
         "github-actions"
       ],
@@ -53,13 +60,6 @@
       ],
       "automerge": true,
       "ignoreTests": true
-    },
-    {
-      "description": "Major updates require manual review (potential breaking changes)",
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "automerge": false
     },
     {
       "description": "Python minor and major version updates require manual review",
