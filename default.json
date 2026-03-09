@@ -76,6 +76,13 @@
       ],
       "automerge": false,
       "prCreation": "immediate"
+    },
+    {
+      "description": "Vulnerability alerts get highest priority to jump rate limit queue (prHourlyLimit/prConcurrentLimit)",
+      "matchCategories": [
+        "security"
+      ],
+      "prPriority": 99
     }
   ],
   "osvVulnerabilityAlerts": true,
