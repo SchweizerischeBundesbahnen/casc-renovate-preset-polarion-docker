@@ -25,7 +25,8 @@
         "asdf"
       ],
       "matchPackageNames": [
-        "python"
+        "python",
+        "python/cpython"
       ],
       "matchUpdateTypes": [
         "major",
