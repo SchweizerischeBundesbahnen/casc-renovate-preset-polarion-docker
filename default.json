@@ -10,7 +10,8 @@
     "pep621",
     "pre-commit",
     "github-actions",
-    "custom.regex"
+    "custom.regex",
+    "asdf"
   ],
   "constraints": {
     "python": ">=3.12"
@@ -20,7 +21,8 @@
       "description": "Python minor and major version updates require manual review",
       "matchManagers": [
         "dockerfile",
-        "pep621"
+        "pep621",
+        "asdf"
       ],
       "matchPackageNames": [
         "python"
