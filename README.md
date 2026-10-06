@@ -34,6 +34,7 @@ That's it! Renovate will now:
 | **Dockerfile** | dockerfile | Minor/patch (3-day wait) |
 | **Docker Compose** | docker-compose | Minor/patch (3-day wait) |
 | **Python** | pep621 (uv/pyproject.toml) | Minor/patch (3-day wait) |
+| **Python version** | asdf (.tool-versions) | Patch (3-day wait) |
 | **Pre-commit** | pre-commit | All updates incl. major |
 | **GitHub Actions** | github-actions | All updates incl. major |
 
